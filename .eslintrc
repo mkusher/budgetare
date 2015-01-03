@@ -1,0 +1,26 @@
+{
+    "ecmaFeatures": {
+        "modules": true
+    },
+    "env": {
+        "es6": true,
+        "jsx": true,
+        "browser": true,
+        "node": true,
+        "jasmine": true
+    },
+    "rules": {
+        "strict": 1,
+        "no-console": 2,
+        "no-debugger": 2,
+        "no-dupe-keys": 2,
+        "no-unreachable": 1,
+        "valid-jsdoc": 2,
+        "guard-for-in": 2,
+        "no-unused-vars": 1,
+        "quotes": [1, "double"],
+        "no-path-concat": 0,
+        "no-shadow": 1,
+        "no-use-before-define": 2
+    }
+}

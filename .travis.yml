@@ -1,0 +1,10 @@
+notifications:
+  slack: cantare:SsYWkf9NP9EjatjzVgUhuJjy
+language: node_js
+sudo: false
+before_script:
+  - npm install -g tsd
+  - tsd install
+  - npm run build
+node_js:
+  - "5"

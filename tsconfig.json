@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "noImplicitAny": true,
+        "target": "ES6",
+        "module": "commonjs",
+        "jsx": "preserve",
+        "rootDir": "./src",
+        "sourceMap": true,
+        "experimentalDecorators": true
+    },
+    "files": [
+        "./src/declarations.d.ts"
+    ]
+}
