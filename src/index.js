@@ -1,6 +1,6 @@
 "use strict";
 
-function Test(){};
+var console = require("console");
 
 module.exports = function App(){
     console.log("hello world!");
