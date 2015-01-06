@@ -1,0 +1,6 @@
+.*vimrc
+.*~
+.*.swp
+*~
+.*.tags
+node_modules/
