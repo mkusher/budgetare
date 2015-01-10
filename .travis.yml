@@ -1,0 +1,5 @@
+notifications:
+  slack: cantare:SsYWkf9NP9EjatjzVgUhuJjy
+language: node_js
+node_js:
+  - "0.11"
