@@ -2,3 +2,5 @@ Budgetare [![Build Status](https://travis-ci.org/cantare/budgetare.svg?branch=ma
 =========
 
 Free financial application
+
+[link](http://cantare.github.io/budgetare/public/index.html)
