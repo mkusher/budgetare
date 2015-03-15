@@ -1,11 +1,14 @@
 jest.dontMock('../index.js');
 
 describe("index test", function(){
-    it("logs a 'hello world' message to console", function(){
-        var index = require("../index.js");
-        var console = require("console");
-
-        index();
-        expect(console.log).toBeCalledWith("hello world!");
+    it("creates application object", function(){
+        var app = require("../index.js"),
+            App = require("../app.js");
+        expect(App).toBeCalled();
+    });
+    it("runs application", function(){
+        var app = require("../index.js"),
+            App = require("../app.js");
+        expect(app.run).toBeCalled();
     });
 });
