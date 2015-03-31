@@ -9,16 +9,14 @@ let privateContainer = new WeakMap;
  */
 export default class ValueObject{
     constructor(value){
-        let valueProp = Symbol();
         if(value instanceof ValueObject){
-            privateContainer.set(valueProp, value.get())
+            privateContainer.set(this, value.get())
         }
         else {
-            privateContainer.set(valueProp, _.cloneDeep(value));
+            privateContainer.set(this, _.cloneDeep(value));
         }
-        this.valueProp = valueProp;
     }
     get(){
-        return _.cloneDeep(privateContainer.get(this.valueProp));
+        return _.cloneDeep(privateContainer.get(this));
     }
 }

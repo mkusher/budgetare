@@ -6,7 +6,7 @@ describe("ValueObject", function(){
     it("creates private field for value", function(){
         var value = "testValue";
         var vo = new ValueObject(value);
-        expect(Object.getOwnPropertyNames(vo)).toEqual(["valueProp"]);
+        expect(Object.getOwnPropertyNames(vo).length).toEqual(0);
     });
     it("saves passed value", function(){
         var value = "someTestValue";
