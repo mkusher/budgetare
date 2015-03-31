@@ -35,6 +35,9 @@ module.exports = {
         new webpack.NoErrorsPlugin()
     ],
     resolve: {
+        alias: {
+            "domain": path.join(__dirname, "../../../src/domain")
+        },
         extensions: ['', '.js', '.jsx', '.styl']
     }
 };
