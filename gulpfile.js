@@ -2,7 +2,8 @@ var config = require('./app/config/build');
 var gulp = require('./bin/build/')([
     'pack',
     'parameters',
-    'server'
+    'server',
+    'test'
 ], config);
 
 gulp.task('init', ['parameters']);

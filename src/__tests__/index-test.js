@@ -1,14 +1,8 @@
-jest.dontMock('../index.js');
-
 describe("index test", function(){
-    it("creates application object", function(){
-        var app = require("../index.js"),
-            App = require("../app.js");
-        expect(App).toBeCalled();
-    });
     it("runs application", function(){
-        var app = require("../index.js"),
-            App = require("../app.js");
-        expect(app.run).toBeCalled();
+        var App = require("../app.js");
+        var spy = sinon.spy(App.prototype, "run");
+        var app = require("../index.js");
+        expect(spy).to.have.been.calledWith();
     });
 });
