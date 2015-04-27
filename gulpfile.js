@@ -3,7 +3,8 @@ var gulp = require('./bin/build/')([
     'pack',
     'parameters',
     'server',
-    'test'
+    'test',
+    'coverage'
 ], config);
 
 gulp.task('init', ['parameters']);

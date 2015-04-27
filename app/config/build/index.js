@@ -12,5 +12,12 @@ module.exports = {
         },
         "build": test,
         "path": "**/__tests__/*.js"
+    },
+    "coverage": {
+        "mocha": {
+            "reporter": "mocha-lcov-reporter"
+        },
+        "build": test,
+        "path": "**/__tests__/*.js"
     }
 }
