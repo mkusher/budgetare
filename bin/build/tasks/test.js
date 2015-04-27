@@ -39,9 +39,11 @@ module.exports = function (config){
                     )
                 );
             });
-            fs.readdirSync(build.output.path).forEach(function(file){
-                fs.unlinkSync(path.join(build.output.path, file));
-            });
+            if(fs.existsSync(build.output.path)){
+                fs.readdirSync(build.output.path).forEach(function(file){
+                    fs.unlinkSync(path.join(build.output.path, file));
+                });
+            }
             var compiler = webpack(config.build);
             compiler.run(function(err, stats){
                 if(err){
