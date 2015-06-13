@@ -15,6 +15,11 @@ module.exports = {
     module: {
         loaders: [
             {
+                test: /\.ts$/,
+                loader: 'awesome-typescript-loader?library=es6',
+                exclude: /node_modules/
+            },
+            {
                 test: /\.jsx?$/,
                 loaders: ['babel-loader'],
                 exclude: /node_modules/
@@ -38,6 +43,6 @@ module.exports = {
         alias: {
             "domain": path.join(__dirname, "../../../src/domain")
         },
-        extensions: ['', '.js', '.jsx', '.styl']
+        extensions: ['', '.ts', '.js', '.jsx', '.styl']
     }
 };

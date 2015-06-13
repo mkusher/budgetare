@@ -1,7 +1,9 @@
 "use strict";
 
 import React from 'react/addons';
-import Components from './components'
+import Components from './components';
+import Money from './domain/shared/Money';
+import Currency from './domain/shared/Currency';
 
 /**
  * @description Application class
@@ -18,6 +20,7 @@ export default class App {
         if(config.debug){
             window.React = React;
         }
+        let moneyTest = new Money(10, new Currency("USD"));
         document.addEventListener("DOMContentLoaded", (event) => {
             React.render(<Components />, document.getElementById("wrap"));
         });
