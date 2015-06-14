@@ -2,6 +2,7 @@
 /// <reference path="../../__types__/expect.d.ts" />
 import Money from '../Money';
 import Currency from '../Currency';
+import NotSameCurrencyError from '../NotSameCurrencyError';
 
 describe("Money", function(){
     it("takes amount as first argument", function(){
@@ -32,6 +33,15 @@ describe("Money", function(){
             expect(m1.add(m2)).not.to.equal(m1);
             expect(m1.add(m2)).not.to.equal(m2);
         });
+        it("throws error when not same currency passed", () => {
+            let c1 = new Currency("EUR"),
+            c2 = new Currency("GBP"),
+            m1 = new Money(10, c1),
+            m2 = new Money(20, c2);
+            expect(() => {
+                m1.add(m2);
+            }).to.throw(NotSameCurrencyError);
+        });
     });
     describe("subtract()", function(){
         it("subtracts money with same currency", function(){
@@ -45,6 +55,15 @@ describe("Money", function(){
             m2 = new Money();
             expect(m1.subtract(m2)).not.to.equal(m1);
             expect(m1.subtract(m2)).not.to.equal(m2);
+        });
+        it("throws error when not same currency passed", () => {
+            let c1 = new Currency("EUR"),
+            c2 = new Currency("GBP"),
+            m1 = new Money(10, c1),
+            m2 = new Money(20, c2);
+            expect(() => {
+                m1.subtract(m2);
+            }).to.throw(NotSameCurrencyError);
         });
     });
 });

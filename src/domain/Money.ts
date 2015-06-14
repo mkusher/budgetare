@@ -1,4 +1,5 @@
 import Currency from './Currency';
+import NotSameCurrencyError from './NotSameCurrencyError';
 
 export default class Money{
     private _amount: number;
@@ -28,13 +29,15 @@ export default class Money{
         return this._currency;
     }
     add(term: Money): Money{
-        if(term.currency.isEqual(this.currency)){
-            return new Money(this.amount + term.amount, this.currency);
+        if(!term.currency.isEqual(this.currency)){
+            throw new NotSameCurrencyError;
         }
+        return new Money(this.amount + term.amount, this.currency);
     }
     subtract(subtrahend: Money): Money{
-        if(subtrahend.currency.isEqual(this.currency)){
-            return new Money(this.amount - subtrahend.amount, this.currency);
+        if(!subtrahend.currency.isEqual(this.currency)){
+            throw new NotSameCurrencyError;
         }
+        return new Money(this.amount - subtrahend.amount, this.currency);
     }
 }
