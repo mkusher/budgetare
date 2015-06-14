@@ -1,6 +1,9 @@
 export default class Currency {
     private _name: string;
-    construct(name: string){
+    constructor();
+    constructor(name: string);
+    constructor(name?: string){
+        name = name || "USD";
         this._name = name;
     }
     get name(): string {

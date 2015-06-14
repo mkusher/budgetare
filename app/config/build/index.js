@@ -11,13 +11,13 @@ module.exports = {
 
         },
         "build": test,
-        "path": "**/__tests__/*.js"
+        "path": "**/__tests__/*.ts"
     },
     "coverage": {
         "mocha": {
             "reporter": "mocha-lcov-reporter"
         },
         "build": test,
-        "path": "**/__tests__/*.js"
+        "path": "**/__tests__/*.ts"
     }
-}
+};
