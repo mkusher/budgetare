@@ -2,6 +2,8 @@ notifications:
   slack: cantare:SsYWkf9NP9EjatjzVgUhuJjy
 language: node_js
 before_script:
+  - npm install -g tsd
+  - tsd reinstall
   - npm run build
   - export CHROME_BIN=chromium-browser
   - export DISPLAY=:99.0
