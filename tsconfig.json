@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "noImplicitAny": true,
+        "target": "es5",
+        "module": "commonjs",
+        "newLine": "LF"
+    }
+}

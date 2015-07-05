@@ -2,7 +2,9 @@ var config = require('./app/config/build');
 var gulp = require('./bin/build/')([
     'pack',
     'parameters',
-    'server'
+    'server',
+    'test',
+    'coverage'
 ], config);
 
 gulp.task('init', ['parameters']);

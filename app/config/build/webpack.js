@@ -15,6 +15,11 @@ module.exports = {
     module: {
         loaders: [
             {
+                test: /\.ts$/,
+                loader: 'awesome-typescript-loader?library=es6',
+                exclude: /node_modules/
+            },
+            {
                 test: /\.jsx?$/,
                 loaders: ['babel-loader'],
                 exclude: /node_modules/
@@ -35,6 +40,9 @@ module.exports = {
         new webpack.NoErrorsPlugin()
     ],
     resolve: {
-        extensions: ['', '.js', '.jsx', '.styl']
+        alias: {
+            "domain": path.join(__dirname, "../../../src/domain")
+        },
+        extensions: ['', '.ts', '.js', '.jsx', '.styl']
     }
 };
