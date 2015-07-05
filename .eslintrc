@@ -1,9 +1,10 @@
 {
-    "settings": {
-        "ecmascript": 6,
-        "jsx": true
+    "ecmaFeatures": {
+        "modules": true
     },
     "env": {
+        "es6": true,
+        "jsx": true,
         "browser": true,
         "node": true,
         "jasmine": true
