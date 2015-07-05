@@ -1,9 +1,7 @@
-"use strict";
-
 import React from 'react/addons';
 import Components from './components';
-import Money from './domain/shared/Money';
-import Currency from './domain/shared/Currency';
+import Money from './domain/Money';
+import Currency from './domain/Currency';
 
 /**
  * @description Application class
