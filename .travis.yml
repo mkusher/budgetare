@@ -3,7 +3,7 @@ notifications:
 language: node_js
 before_script:
   - npm install -g tsd
-  - tsd reinstall
+  - tsd install
   - npm run build
   - export CHROME_BIN=chromium-browser
   - export DISPLAY=:99.0
