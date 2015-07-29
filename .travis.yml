@@ -1,6 +1,7 @@
 notifications:
   slack: cantare:SsYWkf9NP9EjatjzVgUhuJjy
 language: node_js
+sudo: false
 before_script:
   - npm install -g tsd
   - tsd reinstall
