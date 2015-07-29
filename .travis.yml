@@ -4,7 +4,7 @@ language: node_js
 sudo: false
 before_script:
   - npm install -g tsd
-  - tsd reinstall
+  - tsd install
   - npm run build
   - export CHROME_BIN=chromium-browser
   - export DISPLAY=:99.0
