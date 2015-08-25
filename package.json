@@ -49,6 +49,8 @@
     "sinon-chai": "^2.7.0",
     "style-loader": "^0.8.3",
     "stylus-loader": "^1.0.0",
+    "ts-loader": "^0.4.7",
+    "typescript": "^1.5.3",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.0.0",
     "webpack": "^1.7.3",

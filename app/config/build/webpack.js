@@ -16,7 +16,7 @@ module.exports = {
         loaders: [
             {
                 test: /\.ts$/,
-                loader: 'awesome-typescript-loader?library=es6',
+                loaders: ['babel-loader', 'ts-loader'],
                 exclude: /node_modules/
             },
             {
