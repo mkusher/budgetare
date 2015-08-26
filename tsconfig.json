@@ -4,5 +4,6 @@
         "target": "es6",
         "module": "commonjs",
         "newLine": "LF"
-    }
+    },
+    "files": []
 }

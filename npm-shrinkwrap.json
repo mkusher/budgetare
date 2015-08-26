@@ -4390,9 +4390,9 @@
       }
     },
     "ts-loader": {
-      "version": "0.4.7",
-      "from": "ts-loader@*",
-      "resolved": "https://registry.npmjs.org/ts-loader/-/ts-loader-0.4.7.tgz",
+      "version": "0.5.2",
+      "from": "ts-loader@0.5.2",
+      "resolved": "https://registry.npmjs.org/ts-loader/-/ts-loader-0.5.2.tgz",
       "dependencies": {
         "colors": {
           "version": "1.1.2",
@@ -4421,17 +4421,12 @@
           "from": "object-assign@>=2.0.0 <3.0.0",
           "resolved": "https://registry.npmjs.org/object-assign/-/object-assign-2.1.1.tgz"
         },
-        "typescript": {
-          "version": "1.5.3",
-          "from": "typescript@>=1.5.3 <1.6.0",
-          "resolved": "https://registry.npmjs.org/typescript/-/typescript-1.5.3.tgz"
+        "semver": {
+          "version": "5.0.1",
+          "from": "semver@>=5.0.1 <6.0.0",
+          "resolved": "https://registry.npmjs.org/semver/-/semver-5.0.1.tgz"
         }
       }
-    },
-    "typescript": {
-      "version": "1.5.3",
-      "from": "typescript@*",
-      "resolved": "https://registry.npmjs.org/typescript/-/typescript-1.5.3.tgz"
     },
     "vinyl-buffer": {
       "version": "1.0.0",
