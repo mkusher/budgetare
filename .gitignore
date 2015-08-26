@@ -1,6 +1,4 @@
-.*vimrc
-.*~
-.*.swp
-*~
-.*.tags
 node_modules/
+npm-debug.log
+app/runtime
+typings/

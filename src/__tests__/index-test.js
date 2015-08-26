@@ -1,11 +1,8 @@
-jest.dontMock('../index.js');
-
 describe("index test", function(){
-    it("logs a 'hello world' message to console", function(){
-        var index = require("../index.js");
-        var console = require("console");
-
-        index();
-        expect(console.log).toBeCalledWith("hello world!");
+    it("runs application", function(){
+        var App = require("../app.js");
+        var spy = sinon.spy(App.prototype, "run");
+        var app = require("../index.js");
+        expect(spy).to.have.been.calledWith();
     });
 });

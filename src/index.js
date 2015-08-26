@@ -1,7 +1,9 @@
 "use strict";
 
-var console = require("console");
+import App from './app.js';
+import config from './config.js';
 
-module.exports = function App(){
-    console.log("hello world!");
-};
+let app = new App;
+app.run(config);
+
+export default app;

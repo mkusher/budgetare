@@ -1,14 +1,15 @@
-var config = require('./app/config/gulp');
+var config = require('./app/config/build');
 var gulp = require('./bin/build/')([
-    'browserify',
-    'resources',
+    'pack',
+    'parameters',
+    'server',
     'test',
-    'watch'
+    'coverage'
 ], config);
 
-gulp.task('init', ['resources']);
+gulp.task('init', ['parameters']);
 
-gulp.task('build', ['browserify', 'init']);
+gulp.task('build', ['pack', 'init']);
 
-gulp.task('default', ['init', 'watch']);
+gulp.task('default', ['init', 'server']);
 
