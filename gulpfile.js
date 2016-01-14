@@ -3,6 +3,8 @@ var gulp = require('./app/build/')([
     'pack',
     'parameters',
     'watch',
+    'analysis:tslint',
+    'analysis:eslint',
     'test:mocha',
     'test:mocha:build',
     'test:mocha:watch',
@@ -18,6 +20,8 @@ var gulp = require('./app/build/')([
 gulp.task('init', ['parameters']);
 
 gulp.task('build', ['pack', 'init']);
+
+gulp.task('analysis', ['analysis:eslint', 'analysis:tslint']);
 
 gulp.task('default', ['init', 'watch']);
 

@@ -6,5 +6,6 @@ before_script:
   - npm install -g tsd
   - tsd install
   - npm run build
+  - npm run analysis
 node_js:
-  - "5"
+  - "4.1"
