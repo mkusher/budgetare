@@ -14,12 +14,12 @@ export default class App {
      * @param { Object } config  configuration of the application
      * @return { bool } whether application started successful
      */
-    run(config){
-        if(config.debug){
+    run(config) {
+        if (config.debug) {
             window.React = React;
         }
         let moneyTest = new Money(10, new Currency("USD"));
-        document.addEventListener("DOMContentLoaded", (event) => {
+        document.addEventListener("DOMContentLoaded", () => {
             React.render(<Components />, document.getElementById("wrap"));
         });
     }

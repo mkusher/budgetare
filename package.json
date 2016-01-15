@@ -6,10 +6,12 @@
   "scripts": {
     "build": "NODE_ENV=production gulp build",
     "start": "gulp",
-    "test": "npm run coverage && npm run stories",
+    "test": "npm run coverage && npm run stories && npm run coveralls",
     "specs": "gulp test:mocha",
     "coverage": "gulp test:coverage",
-    "stories": "gulp test:cucumber"
+    "stories": "gulp test:cucumber",
+    "coveralls": "cat coverage/lcov.info | coveralls",
+    "analysis": "gulp analysis"
   },
   "repository": {
     "type": "git",
@@ -35,12 +37,16 @@
     "babel-preset-stage-1": "^6.3.13",
     "babel-runtime": "^6.3.19",
     "chai": "^2.3.0",
-    "coveralls": "^2.11.2",
+    "coveralls": "https://registry.npmjs.org/coveralls/-/coveralls-2.11.2.tgz",
     "css-loader": "^0.9.1",
     "cucumber": "^0.4.8",
+    "eslint": "^1.10.3",
+    "eslint-plugin-react": "^3.15.0",
     "file-loader": "^0.8.1",
     "glob": "^5.0.5",
     "gulp": "^3.9.0",
+    "gulp-eslint": "^1.1.1",
+    "gulp-tslint": "^4.3.0",
     "gulp-uglify": "^1.0.2",
     "gulp-util": "^3.0.1",
     "istanbul": "^0.4.1",
@@ -56,6 +62,7 @@
     "style-loader": "^0.8.3",
     "stylus-loader": "^1.0.0",
     "ts-loader": "^0.7.2",
+    "tslint": "^3.2.1",
     "typescript": "^1.7.5",
     "webpack": "^1.12.10",
     "webpack-dev-server": "^1.4.10"

@@ -1,13 +1,13 @@
 /// <reference path="../test-env.d.ts" />
-import Currency from './Currency';
+import Currency from "./Currency";
 
 describe("Currency", () => {
     it("has default currency USD", () => {
-        var c = new Currency;
+        let c = new Currency;
         expect(c.name).to.equal("USD");
     });
     it("takes name as first argument", () => {
-        var c = new Currency("EUR");
+        let c = new Currency("EUR");
         expect(c.name).to.equal("EUR");
     });
     describe("isEqual()", () => {
@@ -24,6 +24,6 @@ describe("Currency", () => {
             let c1 = new Currency("GBP"),
                 c2 = new Currency("EUR");
             expect(c1.isEqual(c2)).to.be.false;
-        })
-    })
+        });
+    });
 });
