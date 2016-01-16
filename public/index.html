@@ -1,24 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
 
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
 
-    <title>Budgetare</title>
-</head>
+        <title>Budgetare</title>
+        <style type="text/css">
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            *,
+            *:after,
+            *:before {
+                box-sizing: border-box;
+            }
+            html,
+            body,
+            #wrap {
+                height: 100%;
+            }
+            #wrap {
+                min-height: 100%;
+            }
+            #loader-container {
+                background-color: #f39c12;
+                min-height: 100%;
+                position: relative;
+            }
+            #loader-container h1 {
+                color: #fff;
+                font-family: "Lucida Grande", Tahoma;
+	            font-size: 40px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                right: 0%;
+            }
+            #loader-container h1 span {
+                position: absolute;
+                left: -180px;
+                top: -110px;
+            }
+            #loader-container .loader {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+            #loader-container .loader .spinnerBlock {
+                -webkit-animation: rotate 600ms linear 600ms infinite;
+                animation: rotate 600ms linear 600ms infinite;
+                -webkit-transform-origin: center;
+                transform-origin: center;
+                display: block;
+                height: 50px;
+                width: 50px;
+            }
+            #loader-container .loader span {
+                display: block;
+                border: 2px solid #fff;
+                border-radius: 50%;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            #loader-container .loader span:nth-child(1) {
+                border-color: #eee;
+            }
+            #loader-container .loader span:nth-child(2) {
+                left: -18px;
+                top: 10px;
+            }
+            #loader-container .loader span:nth-child(3) {
+                left: -18px;
+                top: -10px;
+            }
+            #loader-container .loader span:nth-child(4) {
+                left: 0;
+                top: -18px;
+            }
+            #loader-container .loader span:nth-child(5) {
+                left: 18px;
+                top: -10px;
+            }
+            #loader-container .loader span:nth-child(6) {
+                left: 18px;
+                top: 10px;
+            }
+            #loader-container .loader span:nth-child(7) {
+                left: 0;
+                top: 18px;
+            }
+            @-webkit-keyframes rotate {
+                from {
+                    -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+                to {
+                    -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
+            }
+            @keyframes rotate {
+                from {
+                    -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+                to {
+                    -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
+                }
+            </style>
+    </head>
     <body>
         <div id="wrap" class="content-wrap">
-            <h1>Loading</h1>
+            <div id="loader-container">
+                <h1><span>Welcome to Budgetare</span></h1>
+                <div class="loader">
+                    <div class="spinnerBlock">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <script src="bundle.js"></script>
+        <script type="text/javascript" src="bundle.js"></script>
     </body>
 </html>

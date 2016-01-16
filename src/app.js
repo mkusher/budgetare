@@ -1,7 +1,5 @@
 import React from "react";
 import Components from "./components";
-import Money from "./domain/Money";
-import Currency from "./domain/Currency";
 
 /**
  * @description Application class
@@ -18,7 +16,6 @@ export default class App {
         if (config.debug) {
             window.React = React;
         }
-        let moneyTest = new Money(10, new Currency("USD"));
         document.addEventListener("DOMContentLoaded", () => {
             React.render(<Components />, document.getElementById("wrap"));
         });
